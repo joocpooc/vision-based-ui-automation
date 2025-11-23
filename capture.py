@@ -4,6 +4,10 @@ import mss
 from PIL import Image
 import numpy as np
 from screeninfo import get_monitors
+import os
+
+for folder in ["screenshots/raw", "screenshots/preprocessed", "screenshots/debug"]:
+    os.makedirs(folder, exist_ok=True)
 
 
 def get_monitor(index=2):
