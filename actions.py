@@ -3,7 +3,10 @@
 import subprocess
 import threading
 import time
-from config import instances  # if you move your instances list to config.py
+from config import INSTANCES, TESSERACT_PATH
+
+pytesseract.pytesseract.tesseract_cmd = TESSERACT_PATH
+
 
 
 def connect_bluestacks_devices():
